@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+
+/* ---------------------------------------------nav */
+
+nav {
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li,
+a {
+    color: white;
+    font-size: 12px;
+}
+
+nav ul li:nth-child(2) a {
+    font-size: 20px;
+    color: purple;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav ul li:nth-child(3) a {
+    color: palevioletred;
+}
+
+nav ul li:nth-child(3) i {
+    color: palevioletred;
+    font-size: 15px;
+    margin-left: 6px;
+}
+
+nav ul li:nth-child(4) {
+    position: relative;
+}
+
+nav ul li:nth-child(4) input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding-left: 6px;
+    outline: none;
+}
+
+nav ul li:nth-child(4) i {
+    position: absolute;
+    font-size: 15px;
+    right: 12px;
+    color: gray;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+nav ul li:nth-child(5) button {
+    height: 30px;
+    padding: 0 8px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(147, 145, 145);
+    border-radius: 5px;
+    transform: all 0.5s ease;
+}
+
+nav ul li:nth-child(5) button i {
+    margin-left: 6px;
+}
+
+nav ul li:nth-child(5) button:hover {
+    background-color: palevioletred;
+}
+
+nav ul li:nth-child(6) {
+    position: relative;
+}
+
+nav ul li:nth-child(6) a{
+    color: palevioletred;
+}
+
+
+
+nav ul li:nth-child(9) button {
+    height: 30px;
+    padding: 0 8px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(147, 145, 145);
+    border-radius: 5px;
+    transform: all 0.5s ease;
+}
+
+.btn-content {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: palevioletred;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.btn-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: palevioletred;
+    display: block;
+    pointer-events: none;
+    animation: btnani 0.5s linear infinite;
+}
+
+@keyframes btnani {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+nav ul li:nth-child(8):hover a {
+    color: palevioletred;
+}
+
+nav ul li:nth-child(9):hover button {
+    background-color: palevioletred;
+}
+nav ul li:nth-child(7):hover a {
+    color: palevioletred;
+}
+
+/* -------------------------------------menu-bar */
+
+.menu-bar {
+    background-color: plum;
+}
+
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-bar ul li a {
+    color: black;
+    font-size: 14px;
+}
+
+.menu-bar ul li a i {
+    margin-right: 6px;
+    font-size: 16px;
+}
+
+.menu-bar-content>ul>li {
+    padding: 15px 6px;
+    transition: all 0.3s ease;
+}
+
+.menu-bar ul li:hover {
+    background-color: palevioletred;
+}
+
+
+/* -----------------------------------address-form */
+
+.address-form {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    display: none;
+    z-index: 999;
+}
+
+.address-form-content {
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.address-form-content form {
+    padding: 12px 40px;
+}
+
+.address-form-content h2 {
+    font-size: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.address-form-content h2 span {
+    display: block;
+    position: absolute;
+    height: 30px;
+    padding: 0 6px;
+    border: 1px solid #ddd;
+    right: 12px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 30px;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+.address-form-content form p {
+    font-size: 16px;
+}
+
+.address-form-content form input,
+select {
+    height: 40px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.address-form-content form button {
+    margin-top: 20px;
+    height: 40px;
+    width: 80%;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* --------------------------------------submenu */
+
+.menu-bar content ul li {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #ddd;
+    width: 300px;
+    height: auto;
+    padding: 12px;
+    margin-top: 15px;
+    margin-left: -6px;
+    display: none;
+    z-index: 10;
+}
+
+.submenu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu ul li {
+    padding: 6px;
+}
+
+.menu-bar-content ul li:hover .submenu {
+    display: block;
+}
+
+.submenu ul li:hover a {
+    color: purple;
+}
+
+.submenu ul li:hover {
+    background: none;
+}
+
+
+/* ----------------------------------------------banner phone */
+
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.banner-left {
+    width: 50%;
+    margin-left: 10%;
+}
+
+.banner-right {
+    width: 50%;
+    margin-right: 20%;
+}
+
+
+/* --------------------------------------------logo các hãng điện thoại */
+
+.chonhang-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chonhang-1 h2 {
+    color: #333;
+}
+
+.chonhang-1 ul li a {
+    color: #333;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.chonhang-1 ul {
+    display: flex;
+}
+
+.chonhang-1 ul li {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    border-radius: 40px;
+    margin-top: 10px;
+}
+
+.chonhang-1 ul li:hover {
+    border-color: purple;
+}
+
+.chonhang-1 ul li a img {
+    width: 150px;
+    height: 30px;
+}
+
+
+/* ----------------------------------------------------Chọn điện thoại theo yêu cầu */
+
+.chonhangh2 {
+    font-style: italic;
+    margin-left: 15px;
+}
+
+.chonhang-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chonhang-2 h2 {
+    color: #333;
+}
+
+.chonhang-2 ul li a {
+    color: black;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.chonhang-2 ul {
+    display: flex;
+}
+
+.chonhang-2 ul li {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    border-radius: 40px;
+    margin-top: 10px;
+    color: black;
+}
+
+.chonhang-2 ul li:hover {
+    border-color: purple;
+}
+
+
+/* --------------------------------------------------Danh sách điện thoại */
+
+.product-gallery-one-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-gallery-one-content-product-item {
+    width: 20%;
+    padding: 50px 12px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-gallery-one-content-product-item:hover {
+    box-shadow: 3px 3px 5px #ddd;
+}
+
+.product-gallery-one-content-product-item:hover>img {
+    transform: translateY(-20px);
+}
+
+.product-gallery-one-content-product-item>img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.product-gallery-one-content-product-item>img {
+    width: 100%;
+}
+
+.product-gallery-one-content-product-item-text {
+    padding-top: 25px;
+}
+
+.product-gallery-one-content-product-item-text li {
+    margin-bottom: 6px;
+}
+
+.product-gallery-one-content-product-item-text li:nth-child(3) a {
+    text-decoration: line-through;
+    color: #333;
+}
+
+.product-gallery-one-content-product-item-text li:last-child i {
+    color: orangered;
+    font-size: 12px;
+}
+
+.product-gallery-one-content-product-item-text li:nth-child(1):hover {
+    color: palevioletred;
+}
+
+.product-gallery-one-content-product-item-text li:nth-child(4) {
+    font-weight: bold;
+}
+
+.product-gallery-one {
+    margin-top: 30px;
+}
+
+
+/* ------------------------------------------xemthem */
+
+.button-xemthem button {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 44%;
+    height: 40px;
+    width: 200px;
+    background-color: purple;
+    color: white;
+    font-size: 16px;
+}
+
+.footer-img img {
+    width: 100%;
+    margin-top: 20px;
+}
